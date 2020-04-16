@@ -1,0 +1,57 @@
+@import '../app/variables.styles';
+.featured-products {
+    padding: 3rem 0;
+
+    .heading {
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .description {
+        color: $black;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.slider {
+    height: 400px;   
+}
+
+.slider-img {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .caption-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        p {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: $dark-blue;
+            background-color: $light-gray;
+            letter-spacing: 2px;
+            padding: 1rem;
+        }
+        
+        button {
+            border: none;
+            background-color: $light-orange;
+            color: $white;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            letter-spacing: 1px ;
+        }
+
+    }
+}

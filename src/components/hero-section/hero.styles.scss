@@ -1,0 +1,52 @@
+// import partials
+@import '../app/variables.styles';
+
+// styles for hero section 
+.hero-section {
+    display: flex;
+    height: 85vh;
+
+    .left {
+        flex-basis: 50%;
+        background-color: $dark-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hero-text {
+            width: 35rem;
+
+            .primary {
+                color: $white;
+                font-size: 3rem;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+            }
+
+            .secondary {
+                font-size: 1.2rem;
+                color: $white;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+            }
+
+            .shop-now-btn {
+                color: $white;
+                background-color: $light-orange;
+                border: none;
+                padding: 1rem 2rem;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .right {
+        flex-basis: 50%;
+        background-image: url(../../images/hero-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
