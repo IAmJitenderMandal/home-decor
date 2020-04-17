@@ -1,0 +1,26 @@
+@import '../app/variables.styles';
+
+.product {
+    width: 300px;
+    
+    .img {
+        width: 100%;
+        background-color: $light-gray;
+        text-align: center;
+        img {
+            width: 90%;
+        }
+    }
+
+    .name-price {
+        display: flex;
+        justify-content: space-between;
+
+        h5 {
+            margin-top: 1.2rem;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+    }
+
+}

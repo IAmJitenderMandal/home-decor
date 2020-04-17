@@ -1,6 +1,7 @@
 @import '../app/variables.styles';
 .featured-products {
     padding: 3rem 0;
+    text-align: center;
 
     .heading {
         font-size: 3rem;
@@ -18,10 +19,23 @@
         text-align: center;
         margin-bottom: 2rem;
     }
+
+    .see-all-btn {
+        background-color: transparent;
+        border: 1px solid $dark-blue;
+        padding: 1rem 2rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-top: 5rem;
+    }
 }
 
 .slider {
     height: 400px;   
+
+    .awssld__content {
+        background-color: $black;
+    }
 }
 
 .slider-img {
@@ -38,8 +52,8 @@
         p {
             font-size: 1.4rem;
             text-transform: uppercase;
-            color: $dark-blue;
-            background-color: $light-gray;
+            color: $black;
+            background-color: #ececec70;
             letter-spacing: 2px;
             padding: 1rem;
         }

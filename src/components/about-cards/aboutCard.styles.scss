@@ -1,0 +1,27 @@
+@import '../app/variables.styles';
+
+.card {
+    width: 25%;
+    padding: 2rem;
+    background-color: $light-gray;
+    text-align: center;
+
+    .cardIcon {
+        font-size: 2rem;
+        color: $black;
+    }
+
+    .cardHeading {
+        color: $black;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .cardDescription {
+        color: $black;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}

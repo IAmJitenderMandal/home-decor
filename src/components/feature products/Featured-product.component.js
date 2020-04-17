@@ -14,7 +14,7 @@ export default function FeatureProducts() {
     return (
         <div className="featured-products">
             <h3 className="heading">our featured item</h3>
-            <p class="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p className="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 
             <AwesomeSlider className="slider" css={AwsSliderStyles}>
                 <div className="slider-img">
@@ -46,8 +46,7 @@ export default function FeatureProducts() {
                     </div>
                 </div>
             </AwesomeSlider>
-
-
+            <button className="see-all-btn">See All item</button>
         </div>
     )
 }
