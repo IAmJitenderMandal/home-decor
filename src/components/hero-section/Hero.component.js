@@ -1,4 +1,6 @@
 import React from 'react';
+import Search from '../search/Search.component';
+import ShopingCart from '../shopingCart/ShopingCart.component';
 import './hero.styles.scss';
 
 export default function Hero() {
@@ -12,7 +14,8 @@ export default function Hero() {
                 </div>
             </div>
             <div className="right">
-
+                <Search />
+                <ShopingCart />
             </div>
         </div>
     )

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Hero from '../hero-section/Hero.component';
 import FeatureProducts from '../feature products/Featured-product.component';
 import AboutServices  from '../about-services/AboutServices.component';
-import './app.styles.scss'
 import ProductContainer from '../products-container/Product-container.component';
+import EnqueryForm from '../enquery-form/EnqueryForm.component';
+import './app.styles.scss';
 
 class App extends Component {
     constructor() {
@@ -18,6 +19,7 @@ class App extends Component {
                 <FeatureProducts />
                 <ProductContainer />
                 <AboutServices />
+                <EnqueryForm />
             </div>
         )
     }

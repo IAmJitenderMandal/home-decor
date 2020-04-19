@@ -1,0 +1,30 @@
+@import '../app/variables.styles';
+
+.search {
+    display: flex;
+    // justify-content: space-between;
+    align-items: flex-end;
+    width: 23rem;
+}
+
+input[name="searchInput"] {
+    height: 2.82rem;
+    font-size: 1.3rem;
+    color: $black;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+    box-shadow: none;
+    border: none;
+}
+
+.searchIcon {
+    background-color: $dark-blue;
+    height: 3rem;
+    color: $light-gray;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
