@@ -1,0 +1,101 @@
+@import '../../components/app/variables.styles';
+
+.viewItem {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    margin: 0 auto;
+
+    .product-img {
+        flex-basis: 70%;
+        text-align: center;
+        margin-right: 2rem;
+
+        img {
+            width: 350px;
+        }
+    }
+
+    .product-details {
+        width: 800px;
+
+        .product-title {
+            font-size: 3rem;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin-bottom: 1.4rem;
+            color: $black;
+        }
+ 
+        .product-desc {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            width: 75%;
+            margin-bottom: 0
+        }
+
+        .product-price {
+            color: $light-orange;
+            letter-spacing: 1px;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+
+        }
+
+        .product-dispatch {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: gray;
+            margin-top: 0;
+        }
+
+        .add-cart-btn {
+            font-size: 1.4rem;
+            background-color: transparent;
+            padding: 1rem 2rem;
+            letter-spacing: 1px;
+            color: $light-orange;
+            margin-top: 1rem;
+            border: 1px solid $light-orange;
+            cursor: pointer;
+            transition: 0.4s background-color;
+
+            &:hover {
+                background-color: $light-orange;
+                color: $white;
+            }
+
+        }
+
+        .latest-review {
+            width: 90%;
+            
+            .title {
+                letter-spacing: 1px;
+                font-weight: 300;
+                text-transform: capitalize;
+                margin-top: 2rem;
+            }
+            
+            .reviews {
+                height: 200px;
+                margin-top: 1.5rem;
+                padding-right: 1rem;
+            }
+
+            .review {
+                letter-spacing: 1px;
+
+                .review-by {
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    display: block;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+    }
+
+}
