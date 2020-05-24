@@ -1,13 +1,14 @@
+import { ADD_DATA, REMOVE_DATA } from "./action.types";
+
 const Reducer = function (state, action) {
   switch (action.type) {
-    case "ADD_DATA":
+    case ADD_DATA:
       return [...state, action.payload];
-    case "REMOVE_DATA":
+    case REMOVE_DATA:
       return [...state, action.payload];
     default:
       return state;
   }
 };
-
 
 export default Reducer;

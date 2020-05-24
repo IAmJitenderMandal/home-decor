@@ -1,6 +1,7 @@
 import React from 'react'
 import './products-container.styles.scss';
 import Product from '../product/Product.component';
+import {SeeAllBtn} from '../button/Button.component';
 
 export default function ProductContainer() {
     return (
@@ -26,9 +27,9 @@ export default function ProductContainer() {
                 <Product />
                 <Product />
             </div>
-            {/* <div>
-                <button>See all item</button>
-            </div> */}
+            <div className="btn-container">
+                <SeeAllBtn />
+            </div>
         </div>
     )
 }

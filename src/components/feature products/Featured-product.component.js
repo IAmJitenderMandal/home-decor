@@ -46,7 +46,6 @@ export default function FeatureProducts() {
                     </div>
                 </div>
             </AwesomeSlider>
-            <button className="see-all-btn">See All item</button>
         </div>
     )
 }
