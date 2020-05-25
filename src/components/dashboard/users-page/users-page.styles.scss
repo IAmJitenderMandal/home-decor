@@ -1,3 +1,11 @@
-.users-profiles {
-    height: 600px;
+@import "../../app/variables.styles";
+
+.full-height-container {
+  position: relative;
+  
+  .top {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+  }
 }

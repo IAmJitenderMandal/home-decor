@@ -8,6 +8,23 @@ import Dashboard from "../dashboard/Dashboard.component";
 import "./app.styles.scss";
 import { Link, Route, Switch } from "react-router-dom";
 
+// import config for firebase
+import firebaseConfig from '../../utils/firebaseConfig';
+
+// firebase App the core firebase sdk
+import * as firebase from 'firebase/app';
+
+// add firebase products that you want to use
+import 'firebase/database';
+
+// init firebase
+firebase.initializeApp(firebaseConfig);
+
+// get reference to the database services
+var database = firebase.database();
+
+console.log(database)
+
 function App() {
   return (
     <div className="app">
