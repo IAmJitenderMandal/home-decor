@@ -6,26 +6,15 @@ import UserPage from "./users-page/Users-page.component";
 import AddItems from "./add-items-page/Add-items.component";
 import { Link, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ListGroup, Row, Col } from "reactstrap";
 
-
-import {
-  ListGroup,
-  Row,
-  Col,
-  Form,
-  FormGroup,
-  Button,
-  Label,
-  Input,
-} from "reactstrap";
 
 function Dashboard({ url }) {
+
   return (
-    <div className="full-height-container">
-      <Row className="h-100">
-        <Col md="3">
-          <div className="profile-details">
-          </div>
+    <Fragment>
+      <div className="h-100 add-item">
+        <div className="left">
           <div className="navigation h-100">
             <Link className="text-light text-center" to={`${url}/inventory`}>
               <ListGroup>Inventory</ListGroup>
@@ -37,9 +26,9 @@ function Dashboard({ url }) {
               <ListGroup>Users</ListGroup>
             </Link>
           </div>
-        </Col>
+        </div>
 
-        <Col md="9" className="px-5 h-100">
+        <div className="right px-3 h-100">
           <Switch>
             <Route
               path={`${url}/inventory`}
@@ -49,58 +38,12 @@ function Dashboard({ url }) {
                 </div>
               )}
             />
-            <Route
-              path={`${url}/add_items`}
-              render={() => (
-                <Fragment>
-                  <Form className="add-item-form">
-                  <FormGroup>
-                      <Label for="addFile">Product Name</Label>
-                      <Input
-                        type="file"
-                        name="addFile"
-                        id="addFile"
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="productName">Product Name</Label>
-                      <Input
-                        type="text"
-                        name="ProductName"
-                        id="productName"
-                        placeholder="product name"
-                      />
-                    </FormGroup>
-
-                    <FormGroup>
-                      <Label htmlFor="price">Price</Label>
-                      <Input
-                        type="number"
-                        name="price"
-                        placeholder="product price"
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label htmlFor="description">Description</Label>
-                      <Input
-                        type="text"
-                        name="description"
-                        placeholder="product description"
-                      />
-                    </FormGroup>
-                    <Button>Submit</Button>
-                  </Form>
-                </Fragment>
-              )}
-            />
-
-            <Route path={`${url}/users`} render={(props) => (
-              <UserPage />
-            )} />
+            <Route path={`${url}/add_items`} component={AddItems} />
+            <Route path={`${url}/users`} render={(props) => <UserPage />} />
           </Switch>
-        </Col>
-      </Row>
-    </div>
+        </div>
+      </div>
+    </Fragment>
   );
 }
 

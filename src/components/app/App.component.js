@@ -12,18 +12,16 @@ import { Link, Route, Switch } from "react-router-dom";
 import firebaseConfig from '../../utils/firebaseConfig';
 
 // firebase App the core firebase sdk
-import * as firebase from 'firebase/app';
+// import * as firebase from 'firebase/app';
 
 // add firebase products that you want to use
-import 'firebase/database';
+// import 'firebase/database';
 
 // init firebase
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
 // get reference to the database services
-var database = firebase.database();
-
-console.log(database)
+// var database = firebase.database();
 
 function App() {
   return (

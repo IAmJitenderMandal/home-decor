@@ -1,13 +1,17 @@
 @import "../app/variables.styles";
 
-.full-height-container {
-  height: 95vh;
-  overflow-x: hidden;
+.add-item {
+  position: relative;
+
+  .left {
+    width: 300px;
+    position: fixed;
+    height: 100%;
+  }
 
   .navigation {
     background-color: $black;
     padding: 2rem;
-    position: fixed;
 
     a {
       display: block;
@@ -17,7 +21,8 @@
     }
   }
 
-  .add-item-form {
-    width: 70%;
+  .right {
+    position: absolute;
+    left: 320px;
   }
 }

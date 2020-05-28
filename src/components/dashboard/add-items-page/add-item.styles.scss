@@ -1,0 +1,8 @@
+.add-items {
+    .uploading {
+        display: none;
+        &.true {
+            display: block;
+        }
+    }
+}
