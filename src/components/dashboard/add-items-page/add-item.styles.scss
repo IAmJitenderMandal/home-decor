@@ -1,3 +1,5 @@
+@import '../../app/variables.styles';
+
 .add-items {
     .uploading {
         display: none;
@@ -5,4 +7,36 @@
             display: block;
         }
     }
+
+    .showMsg {
+        color: green;
+    }
 }
+
+.loader_container {
+    .loader {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid $dark-blue;
+      border-left: none;
+      animation: 1s infinite running loader;
+      -webkit-animation: 1s infinite running loader;
+      margin: 10px 0px;
+  
+      &.true {
+          display: block;
+      }
+  }
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+  }
+  }

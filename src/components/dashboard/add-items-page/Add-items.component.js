@@ -21,12 +21,15 @@ if (!firebase.apps.length) {
 const storage = firebase.storage();
 
 const database = firebase.database();
+
 //create reference to our storage bucket
 const storageRef = storage.ref();
 
 function AddItems() {
   const [file, setFile] = useState("");
   const [uploading, setUpaloading] = useState(false);
+  const [profileUpload, setProfileUpload] = useState(false);
+  const [showMsg, setShowMsg] = useState("");
   const [productDetails, setProductDetails] = useState({
     name: "",
     price: "",
@@ -35,11 +38,15 @@ function AddItems() {
   });
 
   const writeUserData = (productName, price, description, imageUrl) => {
-    database.ref(`products/${UID()}`).set({
+    let id = UID();
+    database.ref(`products/${id}`).set({
       productName,
       price,
       description,
       imageUrl,
+    });
+    database.ref(`products/${id}`).on("child_added", () => {
+      setShowMsg("Product Added Successfully");
     });
   };
 
@@ -48,6 +55,8 @@ function AddItems() {
     event.preventDefault();
 
     setUpaloading(true);
+    setProfileUpload(true);
+    setShowMsg("");
     // file referce in storage bucket
     const fileRef = storageRef.child(`usersImgs/usr${UID()}`);
     // file metadata
@@ -72,13 +81,14 @@ function AddItems() {
       },
       () => {
         uploadTask.snapshot.ref.getDownloadURL().then((imgUrl) => {
-          setProductDetails({ ...productDetails,  imgUrl });
+          setProductDetails({ ...productDetails, imgUrl });
           writeUserData(
             productDetails.name,
             productDetails.price,
             productDetails.description,
             imgUrl
           );
+          setProfileUpload(false);
           setProductDetails({
             name: "",
             price: "",
@@ -99,7 +109,6 @@ function AddItems() {
               className="add-item-form"
               onSubmit={uploadFile}
               onChange={(event) => {
-
                 if (event.target.id === "file") {
                   setProductDetails({
                     ...productDetails,
@@ -156,7 +165,6 @@ function AddItems() {
                   placeholder="product name"
                 />
               </FormGroup>
-
               <FormGroup>
                 <Label htmlFor="price">Price</Label>
                 <Input
@@ -178,6 +186,10 @@ function AddItems() {
                   placeholder="product description"
                 />
               </FormGroup>
+              <div className="loader_container">
+                <div className={`loader ${profileUpload}`}></div>
+                <span className="showMsg">{showMsg}</span>
+              </div>
               <Button>Submit</Button>
             </Form>
           </Fragment>

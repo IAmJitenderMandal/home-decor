@@ -1,16 +1,16 @@
-import React from 'react'
-import './product.styles.scss';
+import React from "react";
+import "./product.styles.scss";
 
-export default function Product() {
-    return (
-        <div className="product">
-            <div className="img">
-                <img src="https://robohash.org/7?set=set2" alt="img" />
-            </div>
-            <div className="name-price">
-                <h5>Lorem</h5>
-                <h5>$55</h5>
-            </div>
-        </div>
-    )
+export default function Product(props) {
+  return (
+    <div className="product">
+      <div className="img">
+        <img src={props.product.imageUrl} alt="img" />
+      </div>
+      <div className="name-price">
+        <h5>{props.product.productName}</h5>
+        <h5>{props.product.price}</h5>
+      </div>
+    </div>
+  );
 }
